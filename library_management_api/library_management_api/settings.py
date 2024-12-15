@@ -31,12 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+   'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework', 
+    'books',
+    'users',
+
 ]
 
 MIDDLEWARE = [
@@ -76,7 +80,11 @@ WSGI_APPLICATION = 'library_management_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'alx_book_store',  # Replace with your database name
+        'USER': 'root',  # Replace with your MySQL username
+        'PASSWORD': 'Evan@..6100.',  # Replace with your MySQL password
+        'HOST': 'localhost',  # Use 'localhost' if MySQL is on your local machine
+        'PORT': '3306',
     }
 }
 
